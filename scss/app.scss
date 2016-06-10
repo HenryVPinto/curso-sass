@@ -202,3 +202,27 @@ table {
   table thead tr th {
     background-color: #ffba00;
     color: #000000; }
+
+@mixin gridImagenes($cantidad, $margin) {
+width: ((100% - (($cantidad - 1) * $margin))/$cantidad);
+&:nth-child(n){
+  margin-right: $margin;
+  margin-bottom: $margin;
+}
+&:nth-child(#{$cantidad} n + 1){
+  margin-right: 0;
+  margin-bottom: 0;
+}
+}
+.galeria{
+  @include clearfix;
+  li.imagen{
+    float: left;
+    list-style: none;
+    @include gridImagenes(4, 1%);
+    img{
+      display: block;
+      max-width: 100%;
+    }
+  }
+}
