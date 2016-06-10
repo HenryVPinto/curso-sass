@@ -3,7 +3,10 @@ var sass = require('gulp-sass');
 var browserSync = require('browser-sync');
 var reload = browserSync.reload;
 var autoprefixer = require('gulp-autoprefixer');
-
+var fuentesJS = [
+  'js/funciones.js',
+  'js/scripts'
+]
 gulp.task('sass', function() {
   gulp.src('scss/app.scss')
     .pipe(autoprefixer()

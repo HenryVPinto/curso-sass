@@ -115,7 +115,7 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 1rem;
     color: #ffffff; }
 
-.btn, .btn-verde {
+.btn, .btn-verde, .servicios ul li .btn-servicio {
   display: block;
   background-color: #fe2d28;
   color: #ffffff;
@@ -126,9 +126,9 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-transition: all ease .3s;
   transition: all ease .3s; }
   @media only screen and (min-width: 768px) {
-    .btn, .btn-verde {
+    .btn, .btn-verde, .servicios ul li .btn-servicio {
       display: inline-block; } }
-  .btn:hover, .btn-verde:hover {
+  .btn:hover, .btn-verde:hover, .servicios ul li .btn-servicio:hover {
     background-color: #101069;
     -webkit-transition: all ease .3s;
     transition: all ease .3s; }
@@ -191,3 +191,27 @@ table thead tr th {
   .galeria li.imagen img {
     display: block;
     max-width: 100%; }
+
+.servicios:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+.servicios ul {
+  list-style: none;
+  padding: 0;
+  text-align: center; }
+  .servicios ul li {
+    width: 25%;
+    float: left;
+    box-sizing: border-box;
+    padding: 10px;
+    color: #ffffff; }
+    .servicios ul li h3 {
+      margin: 0; }
+    .servicios ul li .btn-servicio {
+      background-color: #ffba00;
+      font-weight: bold; }
+    .servicios ul li p {
+      color: #cccccc;
+      font-size: 1rem; }

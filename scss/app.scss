@@ -182,3 +182,30 @@ table {
     }
   }
 }
+.servicios{
+  @include clearfix;
+  ul{
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    li{
+      width: 25%;
+      float: left;
+      box-sizing: border-box;
+      padding: 10px;
+      color: $blanco;
+      h3{
+        margin: 0
+      }
+      .btn-servicio{
+        @extend .btn;
+        background-color: $amarillo;
+        font-weight: bold;
+      }
+      p{
+        color: $gris;
+        font-size: 1rem;
+      }
+    }
+  }
+}
