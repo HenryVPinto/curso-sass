@@ -62,7 +62,6 @@ h1, h2, h3, h4, h5, h6 {
         transition: all ease 0.3s; }
 
 .london {
-  background: -webkit-linear-gradient(top, transparent, rgba(0, 0, 0, 0.6)), url("../img/imagen01.jpg");
   background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.6)), url("../img/imagen01.jpg");
   background-position: top center;
   background-repeat: no-repeat;
@@ -70,7 +69,6 @@ h1, h2, h3, h4, h5, h6 {
   height: 600px; }
 
 .estacion {
-  background: -webkit-linear-gradient(top, transparent, rgba(0, 0, 0, 0.6)), url("../img/imagen01.jpg");
   background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.6)), url("../img/imagen01.jpg");
   background-position: center center;
   background-repeat: no-repeat;
@@ -183,11 +181,11 @@ table thead tr th {
 .galeria li.imagen {
   float: left;
   list-style: none;
-  width: 24.25%; }
+  width: 19.2%; }
   .galeria li.imagen:nth-child(n) {
     margin-right: 1%;
     margin-bottom: 1%; }
-  .galeria li.imagen:nth-child(4 n + 1) {
+  .galeria li.imagen:nth-child(5n + 1) {
     margin-right: 0;
     margin-bottom: 0; }
   .galeria li.imagen img {

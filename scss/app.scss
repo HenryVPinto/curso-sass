@@ -1,28 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700|Bitter:400,700);
-$blanco:     #ffffff;
-$azulOscuro: #101069;
-$amarillo:   #ffba00;
-$azul:       #0076a3;
-$verde:      #548c27;
-$rojo:       #fe2d28;
-$morado:     #6d73c2;
-$negro:      #000000;
-$gris:       #cccccc;
+@import 'variables';
+@import 'mixins';
 
-$titulos: 'Bitter', serif;
-$parrafos: 'Open Sans', sans-serif;
-$tablet: 768px;
-$desktop: 1024px;
-@mixin tablet {
-  @media only screen and (min-width: #{$tablet}){
-  @content;
-  }
-}
-@mixin desktop {
-  @media only screen and (min-width: #{$desktop}){
-  @content;
-  }
-}
 *{
 text-decoration: none !important;
 outline: 0 !important;
@@ -49,13 +28,7 @@ h1, h2, h3, h4, h5, h6{
     width:1000px;
   }
 }
-@mixin clearfix {
-  &:after{
-    content: "";
-    display: table;
-    clear: both;
-  }
-}
+
 .navegacion{
   @include clearfix;
   padding: 10px;
@@ -91,13 +64,7 @@ h1, h2, h3, h4, h5, h6{
     }
   }
 }
-@mixin imagenfondo($imagen, $height: 100vh, $bgPos: center center) {
-background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.6)), url($imagen);
-background-position: $bgPos;
-background-repeat: no-repeat;
-background-size: cover;
-height: $height;
-}
+
 .london{
   @include imagenfondo("../img/imagen01.jpg", 600px, top center);
 }
@@ -203,23 +170,12 @@ table {
     background-color: #ffba00;
     color: #000000; }
 
-@mixin gridImagenes($cantidad, $margin) {
-width: ((100% - (($cantidad - 1) * $margin))/$cantidad);
-&:nth-child(n){
-  margin-right: $margin;
-  margin-bottom: $margin;
-}
-&:nth-child(#{$cantidad} n + 1){
-  margin-right: 0;
-  margin-bottom: 0;
-}
-}
 .galeria{
   @include clearfix;
   li.imagen{
     float: left;
     list-style: none;
-    @include gridImagenes(4, 1%);
+    @include gridImagenes(5, 1%);
     img{
       display: block;
       max-width: 100%;
