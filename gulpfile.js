@@ -19,7 +19,12 @@ gulp.task('sass', function() {
       .pipe(autoprefixer())
       .pipe(sass({
         includePaths:['scss']
-      }))
+      }));
+
+      archivosCSS = gulp.src('./node_modules/bootstrap/dist/css/bootstrap.css');
+      return merge(archivoSASS, archivosCSS)
+       .pipe(concat('app.css'))
+       .pipe(gulp.dest('app/css/'))
 });
 gulp.task('js', function(){
   gulp.src(fuentesJS)
@@ -29,6 +34,10 @@ gulp.task('js', function(){
    .pipe(reload({stream:true}))
 });
 
+gulp.task('moverFuentes', function(){
+  gulp.src('./node_modules/bootstrap/dist/fonts/*.{eot,svg,ttf,woff,woff2}')
+  .pipe(gulp.dest('app/fonts'))
+});
 // watch Sass files for changes, run the Sass preprocessor with the 'sass' task and reload
 gulp.task('serve', ['sass'], function() {
   browserSync.init(["app/css/*.css", "app/js/*.js", "app/*.html"], {
@@ -39,7 +48,7 @@ gulp.task('serve', ['sass'], function() {
 
 });
 
-gulp.task('watch', ['sass', 'serve', 'js'], function() {
+gulp.task('watch', ['sass', 'serve', 'js', 'moverFuentes'], function() {
   gulp.watch(["scss/*.scss"], ['sass']);
   gulp.watch(["js/*.js"], ['js']);
 });
