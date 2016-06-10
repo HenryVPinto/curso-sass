@@ -29,6 +29,7 @@ h1, h2, h3, h4, h5, h6{
   }
 }
 
+
 .navegacion{
   @include clearfix;
   padding: 10px;
@@ -169,7 +170,6 @@ table {
   table thead tr th {
     background-color: #ffba00;
     color: #000000; }
-
 .galeria{
   @include clearfix;
   li.imagen{
