@@ -172,3 +172,33 @@ aside{
   @extend .btn;
   background-color: $verde;
 }
+table {
+  margin-top: 30px;
+  width: 100%;
+  text-align: left;
+  font-size: 1rem;
+  border-collapse: collapse; }
+  table > caption {
+    text-align: left;
+    font-size: 1.8rem;
+    padding: 5px;
+    color: #ffba00; }
+  table > thead > tr,
+  table > tbody > tr {
+    color: #ffffff;
+    background-color: #005170; }
+    table > thead > tr:nth-child(odd),
+    table > tbody > tr:nth-child(odd) {
+      background-color: #0076a3; }
+    table > thead > tr:hover,
+    table > tbody > tr:hover {
+      background-color: #e6a700; }
+    table > thead > tr th,
+    table > thead > tr td,
+    table > tbody > tr th,
+    table > tbody > tr td {
+      padding: 10px;
+      border-bottom: 1px dotted #101069; }
+  table thead tr th {
+    background-color: #ffba00;
+    color: #000000; }
