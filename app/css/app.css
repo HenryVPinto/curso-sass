@@ -137,3 +137,13 @@ h1, h2, h3, h4, h5, h6 {
 
 .btn-verde {
   background-color: #548c27; }
+
+table {
+  width: 100%;
+  text-align: left;
+  font-size: 1rem; }
+  table > caption {
+    text-align: left;
+    font-size: 1.8rem;
+    padding: 5px;
+    color: #ffba00; }
